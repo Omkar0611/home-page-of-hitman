@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #15172b;
+            font-family: 'Arial', sans-serif;
+            color: #eee;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .form {
+            background-color: rgba(21, 23, 43, 0.8); /* Slight transparency */
+            border-radius: 20px;
+            padding: 40px;
+            width: 40%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .input-container {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .input {
+            background-color: #303245;
+            border: 0;
+            border-radius: 12px;
+            color: #eee;
+            font-size: 18px;
+            padding: 12px 20px;
+            width: 100%;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input:focus {
+            background-color: #444a68;
+        }
+
+        .cut {
+            background-color: #15172b;
+            border-radius: 10px;
+            height: 20px;
+            left: 20px;
+            position: absolute;
+            top: -20px;
+            width: 76px;
+            transition: transform 0.3s ease;
+        }
+
+        .input:focus ~ .cut {
+            transform: translateY(8px);
+        }
+
+        .placeholder {
+            color: #65657b;
+            font-size: 16px;
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .input:focus ~ .placeholder,
+        .input:not(:placeholder-shown) ~ .placeholder {
+            transform: translateY(-30px) translateX(10px) scale(0.75);
+            color: #dc2f55;
+        }
+
+        .submit {
+            background-color: #08d;
+            border-radius: 12px;
+            border: 0;
+            color: #eee;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 12px 20px;
+            width: 100%;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .submit:hover {
+            background-color: #06b;
+        }
+
+        .submit a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Side Image */
+        .side-image {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Board_of_Control_for_Cricket_in_India_Logo_%282024%29.svg'); /* Add your side image here */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 60%;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+
+            .side-image {
+                width: 80%;
+                height: 400px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form">
+            <div class="title">Welcome</div>
+            <div class="subtitle">Let's login into your account!</div>
+            <form action="{{ url_for('login') }}" method="post">
+                {% if message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                {% endif %}
+                <div class="input-container">
+                    <input id="email" class="input" type="email" name="email" placeholder=" " required />
+                    <div class="cut"></div>
+                    <label for="email" class="placeholder">Email</label>
+                </div>
+                <div class="input-container">
+                    <input id="password" class="input" type="password" name="password" placeholder=" " required />
+                    <div class="cut"></div>
+                    <label for="password" class="placeholder">Password</label>
+                </div>
+                <button type="submit" class="submit">Login</button>
+                <button type="button" class="submit">
+                    <a href="{{ url_for('register') }}">Register</a>
+                </button>
+            </form>
+        </div>
+
+        <!-- Side Image -->
+        <div class="side-image"></div>
+    </div>
+
+</body>
+</html>
+

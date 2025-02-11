@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rohit Sharma - Indian Cricketer">
+    <title>Rohit Sharma - Indian Cricketer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            line-height: 1.6;
+            color: #eee;
+            padding: 0;
+            margin: 0;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #08d;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            color: black; /* Added this line for black text color */
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .content a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #08d;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Mobile Styling */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rohit Sharma - The Hitman of Indian Cricket</h1>
+        <p>Celebrating the career of one of the greatest cricketers of modern times.</p>
+    </header>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="https://m.economictimes.com/thumb/msid-87835542,width-1600,height-900,resizemode-4,imgsize-57450/cricket-t20-world-cup-india-rohit-sharma-ani-0111.jpg" alt="Rohit Sharma in action">
+        </div>
+
+        <section class="content">
+            <h2>Early Life and Career</h2>
+            <p>Rohit Sharma, born on April 30, 1987, in Bansod, Maharashtra, is a cricketer who made his international debut in 2007. Known for his composure and technical prowess, Rohit's journey from domestic cricket to representing India is one of determination and resilience. Starting as a middle-order batsman, he found his place at the top of the order, becoming one of the most successful opening batsmen in world cricket.</p>
+        </section>
+
+        <section class="content">
+            <h2>Career Highlights</h2>
+            <ul>
+                <li><strong>ODI Double Century:</strong> Rohit is the only player to score three double centuries in ODIs, with a career-high of 264 runs against Sri Lanka in 2014.</li>
+                <li><strong>ICC T20 World Cup 2007:</strong> A key member of the Indian squad that won the inaugural T20 World Cup, marking the beginning of a stellar international career.</li>
+                <li><strong>Record-Breaking Performances:</strong> Known for his big knocks, Rohit Sharma has hit five centuries in a single World Cup (2019) and countless match-winning innings.</li>
+                <li><strong>IPL Success:</strong> As the captain of Mumbai Indians, he has led the franchise to five IPL titles, demonstrating leadership and tactical brilliance.</li>
+            </ul>
+        </section>
+
+        <section class="content">
+            <h2>Playing Style and Strengths</h2>
+            <p>Rohit Sharma is renowned for his effortless stroke play and ability to construct long innings. His cover drives, pull shots, and sweet timing make him a treat to watch. His adaptability across formats—ODIs, T20s, and Tests—has made him a key player for India, particularly in limited-overs cricket. His calmness under pressure and ability to play big knocks in crucial matches have earned him the moniker "The Hitman."</p>
+        </section>
+
+        <section class="content">
+            <h2>Personal Life</h2>
+            <p>Rohit Sharma is not just a cricket star; he's also known for his humility and family values. He married Ritika Sajdeh in 2015, and together they have a daughter named Samaira. Off the field, he enjoys watching football, particularly his favorite team, Manchester City, and is involved in charitable activities.</p>
+        </section>
+
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrAz5ykEfX-IFSMm6YdDyTMJq29xirU1GexQ&s" alt="Rohit Sharma with his IPL trophy">
+            <p><em>Rohit Sharma lifting the IPL trophy with Mumbai Indians - a symbol of his leadership.</em></p>
+        </div>
+
+        <footer>
+            <p>Follow Rohit Sharma on social media:</p>
+            <p>
+                <a href="https://www.instagram.com/rohitsharma45" target="_blank">Instagram</a> | 
+                <a href="https://twitter.com/ImRo45" target="_blank">Twitter</a> | 
+                <a href="https://www.facebook.com/rohitsharma45" target="_blank">Facebook</a>
+            </p>
+            <p>&copy; 2025 Cricket Fan Club. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
